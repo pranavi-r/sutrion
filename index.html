@@ -33,6 +33,18 @@
             max-width: 95vw;
             overflow: hidden;
         }
+
+        @media (max-width: 768px) {
+            .coming-soon-text {
+                white-space: normal;
+                line-height: 1.2;
+            }
+
+            .mobile-break::before {
+                content: "\A";
+                white-space: pre;
+            }
+        }
         
         @keyframes glow {
             from {
@@ -50,7 +62,7 @@
     </style>
 </head>
 <body>
-    <div class="coming-soon-text">SUTRION IS COMING SOON</div>
+    <div class="coming-soon-text">SUTRION IS COMING <span class="mobile-break">SOON</span></div>
     
     <script type="module">
         import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
