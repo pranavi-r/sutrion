@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sutrion - Coming Soon</title>
+    <title>Sutrion is Coming Soon</title>
     <style>
         body {
             margin: 0;
@@ -19,9 +19,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: #fff;
-            font-size: 4rem;
+            font-size: clamp(1.5rem, 8vw, 4rem);
             font-weight: bold;
-            letter-spacing: 0.5rem;
+            letter-spacing: clamp(0.1rem, 1vw, 0.5rem);
             text-align: center;
             z-index: 100;
             white-space: nowrap;
@@ -29,6 +29,9 @@
                          0 0 40px rgba(100, 50, 255, 0.6),
                          0 0 60px rgba(227, 155, 0, 0.4);
             animation: glow 2s ease-in-out infinite alternate;
+            padding: 0 1rem;
+            max-width: 95vw;
+            overflow: hidden;
         }
         
         @keyframes glow {
@@ -44,23 +47,10 @@
             }
         }
         
-        @media (max-width: 768px) {
-            .coming-soon-text {
-                font-size: 2.5rem;
-                letter-spacing: 0.3rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .coming-soon-text {
-                font-size: 1.8rem;
-                letter-spacing: 0.2rem;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="coming-soon-text">COMING SOON</div>
+    <div class="coming-soon-text">SUTRION IS COMING SOON</div>
     
     <script type="module">
         import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
